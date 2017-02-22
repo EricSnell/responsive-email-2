@@ -11,6 +11,7 @@
 
   <style>
 
+    /* General Styling */
     body {
       margin: 10px 0;
       padding: 0 10px;
@@ -33,6 +34,25 @@
 
     .table-container-row {
       background-color: #f9f2e7;
+    }
+
+    /* Media Queries */
+    @media only screen and (max-width: 480px) {
+
+      body, table, td, p, a, li, blockquote {
+        -webkit-text-size-adjust: none !important;
+      }
+
+      table {
+        width: 100% !important;
+      }
+
+      .responsive-image {
+        height: auto !important;
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+
     }
 
   </style>
@@ -125,7 +145,7 @@
 
           <!-- Footer -->
           <tr>
-            <td>
+            <td bgcolor="#485465" style="padding: 10px 10px 10px 10px; color: #fff;">
               Footer
             </td>
           </tr> <!-- end footer -->
