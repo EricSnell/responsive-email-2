@@ -9,17 +9,45 @@
 
   <title>Responsive Email Template</title>
 
+  <style>
+
+    body {
+      margin: 10px 0;
+      padding: 0 10px;
+      background: #f9f2e7;
+      font-size: 13px;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      font-family: Helvetica, Arial, sans-serif;
+      color: #333;
+    }
+
+    tr {
+      background-color: #fff;
+    }
+
+    .table-container-row {
+      background-color: #f9f2e7;
+    }
+
+  </style>
+
 </head>
 <body>
 
   <!-- Set cellpadding and cellspacing to 0 to prevent wierd spacing issues in Outlook.
        This table can also act as the container since CSS stylings on the body tag is
        ignored by some email clients -->
-  <table border="1" cellpadding="0" cellspacing="0" width="100%">
-    <tr>
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr class="table-container-row">
       <td>
 
-        <table border="1" cellpadding="0" cellspacing="0" align="center" width="640">
+        <table border="0" cellpadding="0" cellspacing="0" align="center" width="640">
           <tr>
             <td bgcolor="#00a8c6" style="font-size: 0; line-height: 0; padding: 0 10px 0 10px;" height="140" align="center" class="responsive-image">
               <img src="" alt="" />
@@ -41,25 +69,61 @@
           <!-- Since padding acts funny on some email clients (except when on td tags), we use a td with a set height -->
           <tr><td style="font-size: 0; line-height: 0;" height="30">&nbsp;</td></tr>
 
+          <!-- Left & Right Columns -->
           <tr>
             <td>
-              <table border="1" cellpadding="0" cellspacing="0" align="left" width="49%">
+              <!-- Left column -->
+              <table border="0" cellpadding="0" cellspacing="0" align="left" width="49%">
+                <!-- Image -->
                 <tr>
-                  <td>
-                    Left column
+                  <td style="padding: 0 10px;" align="center" class="responsive-image">
+                    <img src="" alt="" width="240">
                   </td>
                 </tr>
-              </table>
-              <table border="1" cellpadding="0" cellspacing="0" align="right" width="49%">
+                <!-- Adding some white space under the image -->
+                <tr><td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td></tr>
+                <!-- Description -->
                 <tr>
                   <td>
-                    Right column
+                    <div style="font-weight: bold; font-size: 16px;">Lorem Ipsum</div>
+                    <div>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus
+                      deserunt soluta atque labore magni placeat, fuga distinctio sed at?
+                    </div>
                   </td>
                 </tr>
-              </table>
+                <!-- Adding some white space under the summary -->
+                <tr><td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td></tr>
+              </table> <!-- end Left column -->
+
+              <!-- Right column -->
+              <table border="0" cellpadding="0" cellspacing="0" align="right" width="49%">
+                <!-- Image -->
+                <tr>
+                  <td style="padding: 0 10px;" align="center" class="responsive-image">
+                    <img src="" alt="" width="240">
+                  </td>
+                </tr>
+                <!-- Adding some white space under the image -->
+                <tr><td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td></tr>
+                <!-- Description -->
+                <tr>
+                  <td>
+                    <div style="font-weight: bold; font-size: 16px;">Lorem Ipsum</div>
+                    <div>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus
+                      deserunt soluta atque labore magni placeat, fuga distinctio sed at?
+                    </div>
+                  </td>
+                </tr>
+                <!-- Adding some white space under the summary -->
+                <tr><td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td></tr>
+              </table> <!-- end Right column -->
+
             </td>
           </tr> <!-- end columns -->
 
+          <!-- Footer -->
           <tr>
             <td>
               Footer
